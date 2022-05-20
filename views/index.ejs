@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='style.css' rel='stylesheet'>
+    <title>Login</title>
+</head>
+<body>
+    <div class='panels'>
+        <div class='left'>
+                <img src='images/welcome.png' height='100px' width='100px'>
+                <center>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+
+                <font size='40px' color='white'>Welcome</font>
+                <br>
+                <br>
+                <font size='5px' color='yellow'>Create Your Profile in No time</font>
+            
+                <br>
+                <br>
+                <br>
+                <!-- <font size='5px' color='orange'>
+                    <ul>
+                        <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry</li> 
+                           <br>
+                        <li>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</li>
+                    </ul>
+                     
+                </font> -->
+            </center>
+            
+            <br>
+        </div>
+        <div class='right'>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <center>
+                <font size='22px'>Log In</font>
+            </center>
+            
+            <br>
+            <div class='error'>
+                <%=data %>
+            </div>
+            <br>
+            <form class='Loginform' id='form' method='post' action='/index'>
+                <input type="text" name="email" placeholder="Email/Username" required>
+                <br>
+                <br>
+                <input type="password" name="password" placeholder="Password" required>
+                <br>
+                <br>
+                <input type="submit" value="Login">
+                <br>
+                <br>
+                <font size='4'>Not Registered? <a href='/register'>Register Here</a></font>
+            </form>
+            
+        </div>
+    </div>
+    <script>
+        $("#form").submit(function(e) {
+            e.preventDefault();
+        });
+    </script>
+</body>
+</html>

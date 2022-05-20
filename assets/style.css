@@ -1,0 +1,190 @@
+html,body { 
+    height: 100vh; 
+    margin: 0px; 
+    padding: 0px; 
+}
+.panels{
+    display: flex;
+    width: 100%;
+    height: 100vh; 
+}
+.left{
+    height:100vh;
+    width: 60%;
+    background-image: url('images/background.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    font-weight: bold;
+    padding: 20px;
+    font-family:'Times New Roman', Times, serif;
+    line-height: 4ch;
+}
+.right{
+    width:40%;
+    height: 100vh;
+    background-color: white;
+    padding: 30px;
+}
+.Loginform{
+    width:80%;
+    margin-left: 20%;
+}
+input[type=text], input[type=email], input[type=password]{
+    width:80%;
+    border: 3px solid orange;
+    padding: 10px;
+    border-radius: 10px;
+}
+input[type=submit]{
+    width: 20%;
+    background-color: darkblue;
+    color: white;
+    border: none;
+    
+}
+.error{
+    width: 70%;
+    color: red;
+    font-weight: bold;
+    margin-left: 20%;
+    font-size: 20px;
+    /* background-color: red; */
+    padding: 3px;
+}
+.register{
+    background-image: url('images/background.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+.registerForm{
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 60%;
+    padding: 20px;
+    padding-left: 30px;
+}
+a{
+    color: orange;
+}
+.regError{
+    width: 100%;
+    color: yellow;
+    font-weight: bold;
+    font-size: 20px;
+    /* background-color: red; */
+    padding: 3px;
+}
+.body{
+    background-color:midnightblue;
+    height: 100vh;
+}
+.profile{
+    margin-top: 10%;
+    width: 50%;
+    margin-left: 25%;
+    border-radius: 25px;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 40%;
+    padding: 20px;
+    color: white;
+    display: flex;
+}
+.pic{
+    width: 20%;
+    margin-top: 5%;
+    height: 5%;
+    margin-right: 10%;
+}
+.text{
+    margin-top: 5%;
+    margin-left: 10%;
+    width: 60%;
+}
+h3{
+    color: orange;
+}
+img{
+    border-radius: 50%;
+}
+.logout{
+    float:right;
+    padding:10px;
+    margin-right:5%;
+    margin-top: 1%;
+}
+.menu{
+    display: flex;
+    padding: 10px;
+    color: white;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+
+}
+.button1, .button2{
+    width: 50%;
+}
+#button1{
+    background-color: darkcyan;
+    border: 1px solid darkcyan;
+    border-radius: 10px;
+    color: white;
+    padding: 10px;
+    margin-left: 30%;
+    margin-right: 30%;
+    width: 40%;
+}
+#button2{
+    background-color: darkred;
+    border: 1px solid darkred;
+    border-radius: 10px;
+    color: white;
+    padding: 10px;
+    margin-left: 30%;
+    margin-right: 30%;
+    width: 40%;
+}
+#pic:hover{
+        backdrop-filter: blur(10px);
+        filter: blur(4px);
+        transition: 0.5s ease;
+}
+
+* {box-sizing: border-box}
+
+/* Container needed to position the overlay. Adjust the width as needed */
+.container {
+  position: relative;
+}
+
+/* The overlay effect - lays on top of the container and over the image */
+.overlay {
+  position: absolute;
+  color: #f1f1f1;
+  transition: .5s ease;
+  opacity:1;
+  color: white;
+  text-align: center;
+  left: 80%;
+  top: 70%;
+  font-size: 20px;
+  overflow: hidden;
+}
+.image:hover{
+    backdrop-filter: blur(10px);
+        filter: blur(4px);
+        transition: 0.5s ease;
+}
+
+/* When you mouse over the container, fade in the overlay title */
+.container:hover .overlay {
+  opacity: 1;
+}
+
+#label{
+    border-radius: 0%;
+    /* border: 1px solid white; */
+}
+.image{
+    border-radius: 50%;
+}

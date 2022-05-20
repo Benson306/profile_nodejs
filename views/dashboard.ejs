@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel='stylesheet'>
+    <title>Dashboard</title>
+</head>
+<body>
+    <div class='body'>
+        <form action="/logout" method='post'>
+            <button type='submit' class='logout'>Logout ( <font color='red'><%=data.username %></font> )</button>
+        </form>
+        
+        <br>
+        <br>
+        <div class='profile'>
+           
+            <div class='text'>
+                <h3>Username:</h3>
+                <h1><%=data.username %></h1>
+                <h3>Email:</h3>
+                <h1><%=data.email %></h1>
+            </div>
+            <div class='pic'>
+                <div class="container">
+                    <% 
+                    if(data.picName == '/uploads/' || data.picName == undefined || data.picName == null){
+                        %>
+                        <img src="images/profile.png" height='200px' class="image" width='200px'>
+                        <%
+                    }else{
+                        %>
+                        <img src="uploads/<%=data.picName%>" height='200px' class="image" width='200px'>
+                        <%
+                    }
+                %>
+                    <div class="overlay">
+                        <form action="/upload" method='POST' id='form' enctype="multipart/form-data">
+                            <label for="image"><img src="images/camera2.png" height='50px' width='50px' id="label"></label>
+                            <input type="file" name="image" style='display: none;' id='image' >
+                            <br>
+                            <input type="submit" style='visibility: hidden;'>
+                        </form> 
+                    </div>
+                  </div> 
+                
+            </div>
+        </div>
+
+        <div class='menu'>
+            <div class='button1'>
+                <form action="/edit/<%=data.id %>" method='post'>
+                    <button type='submit' id='button1'>Edit Profile</button>
+                </form>
+            </div>
+            
+            
+            
+            <div class='button2'>
+                <form action="/delete/<%=data.id %>?_method=DELETE" method='post'>
+                    <button type="submit" id='button2'>Delete Profile</button>
+                </form>
+            </div>
+            
+        </div>
+        
+    </div>
+        <script>
+        document.getElementById('image').onchange = function () {
+            document.getElementById('form').submit();
+        
+        };
+        function hover(){
+            let pic = document.querySelector('#pic');
+            pic.style.opacity = 0;
+
+        }
+        </script>
+</body>
+</html>

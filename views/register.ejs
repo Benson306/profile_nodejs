@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='style.css' rel='stylesheet'>
+    <title>Register</title>
+</head>
+<body>
+    <div class='register'>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <center>
+                         
+            
+            <br>
+            
+            <br>
+            <form class='registerForm' method="post" action="/register">
+                <font size='22px' color='white'>Register</font>
+                <br>
+                <br>
+                <div class='regError'>
+                    <%=data %>
+                </div>
+                <br>
+                <input type="text" name="username" placeholder="Username" required>
+                <br>
+                <br>
+                <input type="email" name="email" placeholder="Email" required>
+                <br>
+                <br>
+                <input type="password" name="password" placeholder="Password" required>
+                <br>
+                <br>
+                <input type="password" name="confpassword" placeholder="Confirm Password" required>
+                <br>
+                <br>
+                <input type="submit" value="Register">
+                <br>
+                <br>
+                <font size='4' color='white'>Already Have an account? <a href='/'>Login Here</a></font>
+            </form>
+        </center>
+        </div>
+</body>
+</html>
